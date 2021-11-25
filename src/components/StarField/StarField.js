@@ -1,5 +1,5 @@
 import StarfieldAnimation from "react-starfield-animation";
-import background from "../../assets/images/stars.jpg";
+//import background from "../../assets/images/stars.jpg";
 
 export default function StarField() {
   return (
