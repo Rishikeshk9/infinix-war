@@ -6,12 +6,10 @@ import Particles from "react-particles-js";
 import asteroid1 from "./assets/images/asteroid1.png";
 import asteroid2 from "./assets/images/asteroid2.png";
 import asteroid3 from "./assets/images/asteroid3.png";
-
+//import Parallax from "parallax-js";
 import ReactPlayer from "react-player";
 
 export default function App() {
-  //var scene = document.getElementById("scene");
-  // var parallaxInstance = new Parallax(scene);
   return (
     <>
       <Navbar />
@@ -91,6 +89,7 @@ export default function App() {
         </div>
       </div>
       <Particles
+        className="absolute z-50  "
         params={{
           particles: {
             number: {
@@ -173,8 +172,8 @@ export default function App() {
           retina_detect: true,
         }}
       />
-      <div className="container h-screen">
-        <div className="cube">
+      <div className=" h-screen items-center justify-center align-middle  ">
+        <div className="cube mx-auto">
           <div className="top"></div>
           <div>
             <span style={{ "--i": 0 }}></span>
