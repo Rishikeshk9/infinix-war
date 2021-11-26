@@ -1,6 +1,9 @@
 import "./team.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { brands } from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
+import "@splidejs/splide/dist/css/splide.min.css";
+
+import { Splide, SplideSlide } from "@splidejs/react-splide";
 export default function StarField() {
   return (
     <div className="team" id="team">
@@ -54,553 +57,658 @@ export default function StarField() {
         </div>
       </div>
 
-      <div className="  grid grid-cols-2   lg:grid-cols-6     grid-flow-row w-full gap-6 my-5 px-5">
-        <div className="col-span-1 lg:block hidden"></div>
-        {/* hover:border-gray-500 bg-gradient-to-br hover:bg-gradient-to-br hover:from-offwhite  hover:to-transparent  */}
-        <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
-          <div className="mb-5">
-            <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
-            <h3 className="text-white text-lg leading-5  uppercase font-semibold">
-              Samarth Gugnani
-            </h3>
-            <p className="text-white text-sm mb-3">
-              Founder and blockchain developer
-            </p>
+      <div className="hidden md:block">
+        <div className="  grid grid-cols-1 px-32   lg:grid-cols-6     grid-flow-row w-full gap-6 my-5  ">
+          <div className="col-span-1 lg:block hidden"></div>
+          {/* hover:border-gray-500 bg-gradient-to-br hover:bg-gradient-to-br hover:from-offwhite  hover:to-transparent  */}
+          <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
+            <div className="mb-5">
+              <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+              <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                Samarth Gugnani
+              </h3>
+              <p className="text-white text-sm mb-3">
+                Founder and blockchain developer
+              </p>
 
-            <ul className="social-nav model-3d-0">
-              <li>
-                <a href="www.infinix.com" className="facebook">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="twitter">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="instagram">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                </a>
-              </li>
-            </ul>
+              <ul className="social-nav model-3d-0">
+                <li>
+                  <a href="www.infinix.com" className="facebook">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="twitter">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="instagram">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
+            <div className="mb-5">
+              <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+              <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                Samarth Gugnani
+              </h3>
+              <p className="text-white text-sm mb-3">
+                Founder and blockchain developer
+              </p>
+
+              <ul className="social-nav model-3d-0">
+                <li>
+                  <a href="www.infinix.com" className="facebook">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="twitter">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="instagram">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
+            <div className="mb-5">
+              <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+              <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                Samarth Gugnani
+              </h3>
+              <p className="text-white text-sm mb-3">
+                Founder and blockchain developer
+              </p>
+
+              <ul className="social-nav model-3d-0">
+                <li>
+                  <a href="www.infinix.com" className="facebook">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="twitter">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="instagram">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
+            <div className="mb-5">
+              <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+              <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                Samarth Gugnani
+              </h3>
+              <p className="text-white text-sm mb-3">
+                Founder and blockchain developer
+              </p>
+
+              <ul className="social-nav model-3d-0">
+                <li>
+                  <a href="www.infinix.com" className="facebook">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="twitter">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="instagram">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 
-        <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
-          <div className="mb-5">
-            <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
-            <h3 className="text-white text-lg leading-5  uppercase font-semibold">
-              Samarth Gugnani
-            </h3>
-            <p className="text-white text-sm mb-3">
-              Founder and blockchain developer
-            </p>
+        <div className="  grid grid-cols-1 px-32    lg:grid-cols-6  grid-flow-row w-full gap-6 my-5">
+          <div className="col-span-1 lg:block hidden"></div>
+          <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
+            <div className="mb-5">
+              <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+              <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                Samarth Gugnani
+              </h3>
+              <p className="text-white text-sm mb-3">
+                Founder and blockchain developer
+              </p>
 
-            <ul className="social-nav model-3d-0">
-              <li>
-                <a href="www.infinix.com" className="facebook">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="twitter">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="instagram">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                </a>
-              </li>
-            </ul>
+              <ul className="social-nav model-3d-0">
+                <li>
+                  <a href="www.infinix.com" className="facebook">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="twitter">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="instagram">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
+            <div className="mb-5">
+              <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+              <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                Samarth Gugnani
+              </h3>
+              <p className="text-white text-sm mb-3">
+                Founder and blockchain developer
+              </p>
+
+              <ul className="social-nav model-3d-0">
+                <li>
+                  <a href="www.infinix.com" className="facebook">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="twitter">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="instagram">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
+            <div className="mb-5">
+              <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+              <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                Samarth Gugnani
+              </h3>
+              <p className="text-white text-sm mb-3">
+                Founder and blockchain developer
+              </p>
+
+              <ul className="social-nav model-3d-0">
+                <li>
+                  <a href="www.infinix.com" className="facebook">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="twitter">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="instagram">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
+            <div className="mb-5">
+              <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+              <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                Samarth Gugnani
+              </h3>
+              <p className="text-white text-sm mb-3">
+                Founder and blockchain developer
+              </p>
+
+              <ul className="social-nav model-3d-0">
+                <li>
+                  <a href="www.infinix.com" className="facebook">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="twitter">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="instagram">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
+        <div className=" grid grid-cols-1 px-32  lg:grid-cols-6  grid-flow-row w-full gap-6 my-5">
+          <div className="col-span-1 lg:block hidden"></div>
+          <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
+            <div className="mb-5">
+              <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+              <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                Samarth Gugnani
+              </h3>
+              <p className="text-white text-sm mb-3">
+                Founder and blockchain developer
+              </p>
 
-        <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
-          <div className="mb-5">
-            <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
-            <h3 className="text-white text-lg leading-5  uppercase font-semibold">
-              Samarth Gugnani
-            </h3>
-            <p className="text-white text-sm mb-3">
-              Founder and blockchain developer
-            </p>
-
-            <ul className="social-nav model-3d-0">
-              <li>
-                <a href="www.infinix.com" className="facebook">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="twitter">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="instagram">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                </a>
-              </li>
-            </ul>
+              <ul className="social-nav model-3d-0">
+                <li>
+                  <a href="www.infinix.com" className="facebook">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="twitter">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="instagram">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
 
-        <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
-          <div className="mb-5">
-            <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
-            <h3 className="text-white text-lg leading-5  uppercase font-semibold">
-              Samarth Gugnani
-            </h3>
-            <p className="text-white text-sm mb-3">
-              Founder and blockchain developer
-            </p>
+          <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
+            <div className="mb-5">
+              <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+              <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                Samarth Gugnani
+              </h3>
+              <p className="text-white text-sm mb-3">
+                Founder and blockchain developer
+              </p>
 
-            <ul className="social-nav model-3d-0">
-              <li>
-                <a href="www.infinix.com" className="facebook">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="twitter">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="instagram">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                </a>
-              </li>
-            </ul>
+              <ul className="social-nav model-3d-0">
+                <li>
+                  <a href="www.infinix.com" className="facebook">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="twitter">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="instagram">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
+            <div className="mb-5">
+              <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+              <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                Samarth Gugnani
+              </h3>
+              <p className="text-white text-sm mb-3">
+                Founder and blockchain developer
+              </p>
+
+              <ul className="social-nav model-3d-0">
+                <li>
+                  <a href="www.infinix.com" className="facebook">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="twitter">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="instagram">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
+            <div className="mb-5">
+              <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+              <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                Samarth Gugnani
+              </h3>
+              <p className="text-white text-sm mb-3">
+                Founder and blockchain developer
+              </p>
+
+              <ul className="social-nav model-3d-0">
+                <li>
+                  <a href="www.infinix.com" className="facebook">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("facebook")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="twitter">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("twitter")} />
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="www.infinix.com" className="instagram">
+                    <div className="front">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                    <div className="back">
+                      <FontAwesomeIcon icon={brands("linkedin")} />
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="  grid grid-cols-2 px-5 lg:grid-cols-6  grid-flow-row w-full gap-6 my-5">
-        <div className="col-span-1 lg:block hidden"></div>
-        <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
-          <div className="mb-5">
-            <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
-            <h3 className="text-white text-lg leading-5  uppercase font-semibold">
-              Samarth Gugnani
-            </h3>
-            <p className="text-white text-sm mb-3">
-              Founder and blockchain developer
-            </p>
+      <div className="flex md:hidden">
+        <Splide
+          className="w-full"
+          options={{
+            rewind: true,
+            gap: "1rem",
+          }}
+        >
+          <SplideSlide>
+            <div className="mx-20 my-5 py-6 backdrop-filter backdrop-blur-xl hover:bg-white hover:bg-opacity-10 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500 ">
+              <div className="mb-5">
+                <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+                <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                  Samarth Gugnani
+                </h3>
+                <p className="text-white text-sm mb-3">
+                  Founder and blockchain developer
+                </p>
 
-            <ul className="social-nav model-3d-0">
-              <li>
-                <a href="www.infinix.com" className="facebook">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="twitter">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="instagram">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+                <ul className="social-nav model-3d-0">
+                  <li>
+                    <a href="www.infinix.com" className="facebook">
+                      <div className="front">
+                        <FontAwesomeIcon icon={brands("facebook")} />
+                      </div>
+                      <div className="back">
+                        <FontAwesomeIcon icon={brands("facebook")} />
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="www.infinix.com" className="twitter">
+                      <div className="front">
+                        <FontAwesomeIcon icon={brands("twitter")} />
+                      </div>
+                      <div className="back">
+                        <FontAwesomeIcon icon={brands("twitter")} />
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="www.infinix.com" className="instagram">
+                      <div className="front">
+                        <FontAwesomeIcon icon={brands("linkedin")} />
+                      </div>
+                      <div className="back">
+                        <FontAwesomeIcon icon={brands("linkedin")} />
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className="mx-20 my-5 py-6 backdrop-filter backdrop-blur-xl hover:bg-white hover:bg-opacity-10 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500 ">
+              <div className="mb-5">
+                <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+                <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                  Samarth Gugnani
+                </h3>
+                <p className="text-white text-sm mb-3">
+                  Founder and blockchain developer
+                </p>
 
-        <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
-          <div className="mb-5">
-            <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
-            <h3 className="text-white text-lg leading-5  uppercase font-semibold">
-              Samarth Gugnani
-            </h3>
-            <p className="text-white text-sm mb-3">
-              Founder and blockchain developer
-            </p>
-
-            <ul className="social-nav model-3d-0">
-              <li>
-                <a href="www.infinix.com" className="facebook">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="twitter">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="instagram">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
-          <div className="mb-5">
-            <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
-            <h3 className="text-white text-lg leading-5  uppercase font-semibold">
-              Samarth Gugnani
-            </h3>
-            <p className="text-white text-sm mb-3">
-              Founder and blockchain developer
-            </p>
-
-            <ul className="social-nav model-3d-0">
-              <li>
-                <a href="www.infinix.com" className="facebook">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="twitter">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="instagram">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
-          <div className="mb-5">
-            <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
-            <h3 className="text-white text-lg leading-5  uppercase font-semibold">
-              Samarth Gugnani
-            </h3>
-            <p className="text-white text-sm mb-3">
-              Founder and blockchain developer
-            </p>
-
-            <ul className="social-nav model-3d-0">
-              <li>
-                <a href="www.infinix.com" className="facebook">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="twitter">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="instagram">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div className=" grid grid-cols-2 px-5 lg:grid-cols-6  grid-flow-row w-full gap-6 my-5">
-        <div className="col-span-1 lg:block hidden"></div>
-        <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
-          <div className="mb-5">
-            <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
-            <h3 className="text-white text-lg leading-5  uppercase font-semibold">
-              Samarth Gugnani
-            </h3>
-            <p className="text-white text-sm mb-3">
-              Founder and blockchain developer
-            </p>
-
-            <ul className="social-nav model-3d-0">
-              <li>
-                <a href="www.infinix.com" className="facebook">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="twitter">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="instagram">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
-          <div className="mb-5">
-            <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
-            <h3 className="text-white text-lg leading-5  uppercase font-semibold">
-              Samarth Gugnani
-            </h3>
-            <p className="text-white text-sm mb-3">
-              Founder and blockchain developer
-            </p>
-
-            <ul className="social-nav model-3d-0">
-              <li>
-                <a href="www.infinix.com" className="facebook">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="twitter">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="instagram">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
-          <div className="mb-5">
-            <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
-            <h3 className="text-white text-lg leading-5  uppercase font-semibold">
-              Samarth Gugnani
-            </h3>
-            <p className="text-white text-sm mb-3">
-              Founder and blockchain developer
-            </p>
-
-            <ul className="social-nav model-3d-0">
-              <li>
-                <a href="www.infinix.com" className="facebook">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="twitter">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="instagram">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
-          <div className="mb-5">
-            <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
-            <h3 className="text-white text-lg leading-5  uppercase font-semibold">
-              Samarth Gugnani
-            </h3>
-            <p className="text-white text-sm mb-3">
-              Founder and blockchain developer
-            </p>
-
-            <ul className="social-nav model-3d-0">
-              <li>
-                <a href="www.infinix.com" className="facebook">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("facebook")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="twitter">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("twitter")} />
-                  </div>
-                </a>
-              </li>
-              <li>
-                <a href="www.infinix.com" className="instagram">
-                  <div className="front">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                  <div className="back">
-                    <FontAwesomeIcon icon={brands("linkedin")} />
-                  </div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
+                <ul className="social-nav model-3d-0">
+                  <li>
+                    <a href="www.infinix.com" className="facebook">
+                      <div className="front">
+                        <FontAwesomeIcon icon={brands("facebook")} />
+                      </div>
+                      <div className="back">
+                        <FontAwesomeIcon icon={brands("facebook")} />
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="www.infinix.com" className="twitter">
+                      <div className="front">
+                        <FontAwesomeIcon icon={brands("twitter")} />
+                      </div>
+                      <div className="back">
+                        <FontAwesomeIcon icon={brands("twitter")} />
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="www.infinix.com" className="instagram">
+                      <div className="front">
+                        <FontAwesomeIcon icon={brands("linkedin")} />
+                      </div>
+                      <div className="back">
+                        <FontAwesomeIcon icon={brands("linkedin")} />
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </SplideSlide>
+        </Splide>
       </div>
     </div>
   );
