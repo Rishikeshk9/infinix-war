@@ -28,11 +28,11 @@ export default function StarField() {
       </div>
 
       <div className=" m-auto  w-max    transform self-center align-middle items-center  hidden">
-        <div className="mat-sphere  mx-auto lg:mat-sphere-large "> </div>{" "}
+        <div className="mat-sphere  mx-auto   "> </div>{" "}
       </div>
 
       <div className="   items-center justify-center sm:items-stretch sm:justify-start mt-14 self-center text-center  h-50 w-full bg-black ">
-        <div className=" ml-auto -mr-20 md:mr-10 w-max" id="scene">
+        <div className=" ml-auto   md:mr-10 w-max hidden lg:block" id="scene">
           <div className="neon-sphere-xlarge ml-auto  " data-depth="0.2"></div>
         </div>
 
@@ -40,10 +40,7 @@ export default function StarField() {
           className=" mx-auto  w-max  absolute md:left-44 transform "
           id="scene2"
         >
-          <div
-            className="mat-sphere  mx-auto lg:mat-sphere-large -mt-12"
-            data-depth="1"
-          ></div>
+          <div className="mat-sphere  mx-auto   -mt-12" data-depth="1"></div>
         </div>
 
         <div
@@ -51,7 +48,7 @@ export default function StarField() {
           id="scene5"
         >
           <div
-            className="mat-sphere-small  mx-auto lg:mat-sphere-large -mt-12"
+            className="mat-sphere-small  mx-auto   -mt-12"
             data-depth="1"
           ></div>
         </div>
