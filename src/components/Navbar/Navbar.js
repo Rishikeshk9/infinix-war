@@ -6,7 +6,7 @@ import { MenuIcon, XIcon } from "@heroicons/react/outline";
 const navigation = [
   { name: "Marketplace", href: "#", current: true },
   { name: "Roadmap", href: "#", current: false },
-  { name: "Team", href: "#", current: false },
+  { name: "Team", href: "#team", current: false },
 
   { name: "About", href: "#", current: false },
 ];
@@ -73,6 +73,7 @@ export default function Example() {
                       : "text-gray-300 hover:bg-white hover:bg-opacity-10 hover:text-white",
                     "block px-3 py-2   text-base font-medium"
                   )}
+                  data-scroll
                   aria-current={item.current ? "page" : undefined}
                 >
                   {item.name}

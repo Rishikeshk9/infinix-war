@@ -1,34 +1,71 @@
-import StarfieldAnimation from "react-starfield-animation";
-//import background from "../../assets/images/stars.jpg";
+import Particles from "react-particles-js";
+//import background from ../../assets/images/stars.jpg;
 
 export default function StarField() {
   return (
-    <div
-      style={{
-        opacity: 0.2,
-        backgroundSize: "stretch",
-        minHeight: "100vh",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
+    <Particles
+      className="absolute w-full"
+      params={{
+        particles: {
+          number: { value: 300, density: { enable: true, value_area: 800 } },
+          color: { value: "#fff" },
+          shape: {
+            type: "circle",
+            stroke: { width: 0, color: "#FF0" },
+            polygon: { nb_sides: 5 },
+            image: { src: "img/github.svg", width: 100, height: 100 },
+          },
+          opacity: {
+            value: 0.5,
+            random: true,
+            anim: { enable: false, speed: 1, opacity_min: 0.1, sync: false },
+          },
+          size: {
+            value: 2,
+            random: true,
+            anim: { enable: false, speed: 40, size_min: 0.1, sync: false },
+          },
+          line_linked: {
+            enable: false,
+            distance: 500,
+            color: "#fff",
+            opacity: 0.4,
+            width: 2,
+          },
+          move: {
+            enable: true,
+            speed: 2,
+            direction: "bottom",
+            random: false,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+            attract: { enable: false, rotateX: 600, rotateY: 1200 },
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "bubble" },
+            onclick: { enable: true, mode: "repulse" },
+            resize: false,
+          },
+          modes: {
+            grab: { distance: 400, line_linked: { opacity: 0.5 } },
+            bubble: {
+              distance: 400,
+              size: 4,
+              duration: 0.3,
+              opacity: 1,
+              speed: 3,
+            },
+            repulse: { distance: 200, duration: 0.4 },
+            push: { particles_nb: 4 },
+            remove: { particles_nb: 2 },
+          },
+        },
+        retina_detect: false,
       }}
-      className="bg-opacity-10"
-    >
-      <StarfieldAnimation
-        style={{
-          position: "absolute",
-
-          top: 0,
-          left: 0,
-          right: 0,
-          bottom: 0,
-          zIndex: -1,
-        }}
-        numParticles={600}
-        lineWidth={2}
-        alphaFactor={1}
-        depth={5300}
-      />
-    </div>
+    />
   );
 }

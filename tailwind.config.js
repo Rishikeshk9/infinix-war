@@ -2,7 +2,21 @@ module.exports = {
   purge: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {},
+    extend: {
+      dropShadow: {
+        lg: "0 15px 15px rgba(255, 255, 255, 0.25)",
+      },
+      colors: {
+        offwhite: "#aaa",
+      },
+    },
+    backdropFilter: {
+      none: "none",
+      blur: "blur(20px)",
+    },
+    border: {
+      0.5: "0.5px solid",
+    },
 
     glow: {
       colors: {
@@ -27,7 +41,14 @@ module.exports = {
     // ...
   },
   variants: {
-    extend: {},
+    extend: {
+      dropShadow: ["hover", "focus"],
+      opacity: ["responsive", "hover", "focus", "group-hover"],
+      backgroundColor: ["responsive", "hover", "focus", "group-hover"],
+      blur: ["hover", "focus"],
+      border: ["hover", "focus"],
+      borderColor: ["hover", "focus"],
+    },
   },
-  plugins: [require("tailwindcss-glow")()],
+  plugins: [require("tailwindcss-glow"), require("tailwindcss-filters")],
 };
