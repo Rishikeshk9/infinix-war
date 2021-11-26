@@ -22,7 +22,7 @@ export default function PlayNEarn() {
           The lucrative NFT fantasy-themed RPG Game on
           <br /> BSC and Polygon
         </h4>
-        <a href="#" className="neon-button mx-auto ml-10">
+        <a href="www.infinix.com" className="neon-button mx-auto ml-10">
           <span></span>
           <span></span>
           <span></span>

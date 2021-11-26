@@ -1,10 +1,6 @@
 import "./team.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  solid,
-  regular,
-  brands,
-} from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
+import { brands } from "@fortawesome/fontawesome-svg-core/import.macro"; // <-- import styles to be used
 export default function StarField() {
   return (
     <div className="team" id="team">
@@ -73,7 +69,7 @@ export default function StarField() {
 
             <ul className="social-nav model-3d-0">
               <li>
-                <a href="#" className="facebook">
+                <a href="www.infinix.com" className="facebook">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("facebook")} />
                   </div>
@@ -83,7 +79,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="www.infinix.com" className="twitter">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("twitter")} />
                   </div>
@@ -93,7 +89,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="www.infinix.com" className="instagram">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("linkedin")} />
                   </div>
@@ -118,7 +114,7 @@ export default function StarField() {
 
             <ul className="social-nav model-3d-0">
               <li>
-                <a href="#" className="facebook">
+                <a href="www.infinix.com" className="facebook">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("facebook")} />
                   </div>
@@ -128,7 +124,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="www.infinix.com" className="twitter">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("twitter")} />
                   </div>
@@ -138,7 +134,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="www.infinix.com" className="instagram">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("linkedin")} />
                   </div>
@@ -163,7 +159,7 @@ export default function StarField() {
 
             <ul className="social-nav model-3d-0">
               <li>
-                <a href="#" className="facebook">
+                <a href="www.infinix.com" className="facebook">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("facebook")} />
                   </div>
@@ -173,7 +169,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="www.infinix.com" className="twitter">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("twitter")} />
                   </div>
@@ -183,7 +179,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="www.infinix.com" className="instagram">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("linkedin")} />
                   </div>
@@ -208,7 +204,7 @@ export default function StarField() {
 
             <ul className="social-nav model-3d-0">
               <li>
-                <a href="#" className="facebook">
+                <a href="www.infinix.com" className="facebook">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("facebook")} />
                   </div>
@@ -218,7 +214,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="www.infinix.com" className="twitter">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("twitter")} />
                   </div>
@@ -228,7 +224,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="www.infinix.com" className="instagram">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("linkedin")} />
                   </div>
@@ -256,7 +252,7 @@ export default function StarField() {
 
             <ul className="social-nav model-3d-0">
               <li>
-                <a href="#" className="facebook">
+                <a href="www.infinix.com" className="facebook">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("facebook")} />
                   </div>
@@ -266,7 +262,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="www.infinix.com" className="twitter">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("twitter")} />
                   </div>
@@ -276,7 +272,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="www.infinix.com" className="instagram">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("linkedin")} />
                   </div>
@@ -301,7 +297,7 @@ export default function StarField() {
 
             <ul className="social-nav model-3d-0">
               <li>
-                <a href="#" className="facebook">
+                <a href="www.infinix.com" className="facebook">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("facebook")} />
                   </div>
@@ -311,7 +307,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="www.infinix.com" className="twitter">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("twitter")} />
                   </div>
@@ -321,7 +317,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="www.infinix.com" className="instagram">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("linkedin")} />
                   </div>
@@ -346,7 +342,7 @@ export default function StarField() {
 
             <ul className="social-nav model-3d-0">
               <li>
-                <a href="#" className="facebook">
+                <a href="www.infinix.com" className="facebook">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("facebook")} />
                   </div>
@@ -356,7 +352,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="www.infinix.com" className="twitter">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("twitter")} />
                   </div>
@@ -366,7 +362,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="www.infinix.com" className="instagram">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("linkedin")} />
                   </div>
@@ -391,7 +387,7 @@ export default function StarField() {
 
             <ul className="social-nav model-3d-0">
               <li>
-                <a href="#" className="facebook">
+                <a href="www.infinix.com" className="facebook">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("facebook")} />
                   </div>
@@ -401,7 +397,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="www.infinix.com" className="twitter">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("twitter")} />
                   </div>
@@ -411,7 +407,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="www.infinix.com" className="instagram">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("linkedin")} />
                   </div>
@@ -438,7 +434,7 @@ export default function StarField() {
 
             <ul className="social-nav model-3d-0">
               <li>
-                <a href="#" className="facebook">
+                <a href="www.infinix.com" className="facebook">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("facebook")} />
                   </div>
@@ -448,7 +444,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="www.infinix.com" className="twitter">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("twitter")} />
                   </div>
@@ -458,7 +454,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="www.infinix.com" className="instagram">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("linkedin")} />
                   </div>
@@ -483,7 +479,7 @@ export default function StarField() {
 
             <ul className="social-nav model-3d-0">
               <li>
-                <a href="#" className="facebook">
+                <a href="www.infinix.com" className="facebook">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("facebook")} />
                   </div>
@@ -493,7 +489,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="www.infinix.com" className="twitter">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("twitter")} />
                   </div>
@@ -503,7 +499,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="www.infinix.com" className="instagram">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("linkedin")} />
                   </div>
@@ -528,7 +524,7 @@ export default function StarField() {
 
             <ul className="social-nav model-3d-0">
               <li>
-                <a href="#" className="facebook">
+                <a href="www.infinix.com" className="facebook">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("facebook")} />
                   </div>
@@ -538,7 +534,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="www.infinix.com" className="twitter">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("twitter")} />
                   </div>
@@ -548,7 +544,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="www.infinix.com" className="instagram">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("linkedin")} />
                   </div>
@@ -573,7 +569,7 @@ export default function StarField() {
 
             <ul className="social-nav model-3d-0">
               <li>
-                <a href="#" className="facebook">
+                <a href="www.infinix.com" className="facebook">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("facebook")} />
                   </div>
@@ -583,7 +579,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="twitter">
+                <a href="www.infinix.com" className="twitter">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("twitter")} />
                   </div>
@@ -593,7 +589,7 @@ export default function StarField() {
                 </a>
               </li>
               <li>
-                <a href="#" className="instagram">
+                <a href="www.infinix.com" className="instagram">
                   <div className="front">
                     <FontAwesomeIcon icon={brands("linkedin")} />
                   </div>

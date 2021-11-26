@@ -1,10 +1,6 @@
 import "./index.css";
 import videoLink from "./assets/videos/infinix-war.webm";
 import Navbar from "./components/Navbar/Navbar";
-import Particles from "react-particles-js";
-import asteroid1 from "./assets/images/asteroid1.png";
-import asteroid2 from "./assets/images/asteroid2.png";
-import asteroid3 from "./assets/images/asteroid3.png";
 //import Parallax from "parallax-js";
 import ReactPlayer from "react-player";
 import AnimatedCursor from "react-animated-cursor";
