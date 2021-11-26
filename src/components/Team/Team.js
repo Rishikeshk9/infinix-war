@@ -32,7 +32,7 @@ export default function StarField() {
       </div>
 
       <div className="   items-center justify-center sm:items-stretch sm:justify-start mt-14 self-center text-center  h-50 w-full bg-black ">
-        <div className=" ml-auto   md:mr-10 w-max hidden lg:block" id="scene">
+        <div className=" ml-auto   md:mr-40 w-max hidden lg:block" id="scene">
           <div className="neon-sphere-xlarge ml-auto  " data-depth="0.2"></div>
         </div>
 
@@ -54,8 +54,8 @@ export default function StarField() {
         </div>
       </div>
 
-      <div className="hidden md:block">
-        <div className="  grid grid-cols-1 px-32   lg:grid-cols-6     grid-flow-row w-full gap-6 my-5  ">
+      <div className="hidden ">
+        <div className="  grid grid-cols-1  md:grid-cols-3 xl:grid-cols-6     grid-flow-row w-full gap-6 my-5  ">
           <div className="col-span-1 lg:block hidden"></div>
           {/* hover:border-gray-500 bg-gradient-to-br hover:bg-gradient-to-br hover:from-offwhite  hover:to-transparent  */}
           <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
@@ -239,7 +239,7 @@ export default function StarField() {
           </div>
         </div>
 
-        <div className="  grid grid-cols-1 px-32    lg:grid-cols-6  grid-flow-row w-full gap-6 my-5">
+        <div className="  grid grid-cols-1   md:grid-cols-3 xl:grid-cols-6  grid-flow-row w-full gap-6 my-5">
           <div className="col-span-1 lg:block hidden"></div>
           <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
             <div className="mb-5">
@@ -421,7 +421,7 @@ export default function StarField() {
             </div>
           </div>
         </div>
-        <div className=" grid grid-cols-1 px-32  lg:grid-cols-6  grid-flow-row w-full gap-6 my-5">
+        <div className=" grid grid-cols-1 md:grid-cols-3 xl:grid-cols-6  grid-flow-row w-full gap-6 my-5">
           <div className="col-span-1 lg:block hidden"></div>
           <div className="backdrop-filter backdrop-blur-md hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500">
             <div className="mb-5">
@@ -604,17 +604,34 @@ export default function StarField() {
           </div>
         </div>
       </div>
-
-      <div className="flex md:hidden">
+      <h4 className="uppercase text-center text-white text-5xl self-center mx-auto justify-center font-bold mt-3">
+        TEAM
+      </h4>
+      <div className="flex ">
         <Splide
-          className="w-full"
+          className="w-full lg:mx-32"
           options={{
             rewind: true,
-            gap: "1rem",
+
+            perPage: 4,
+            breakpoints: {
+              640: {
+                perPage: 1,
+              },
+              960: {
+                perPage: 2,
+              },
+              1280: {
+                perPage: 3,
+              },
+              1920: {
+                perPage: 4,
+              },
+            },
           }}
         >
           <SplideSlide>
-            <div className="mx-20 my-5 py-6 backdrop-filter backdrop-blur-xl hover:bg-white hover:bg-opacity-10 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500 ">
+            <div className="mx-20 sm:mx-6 my-5 py-6 backdrop-filter backdrop-blur-xl hover:bg-white hover:bg-opacity-10 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500 ">
               <div className="mb-5">
                 <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
                 <h3 className="text-white text-lg leading-5  uppercase font-semibold">
@@ -660,7 +677,99 @@ export default function StarField() {
             </div>
           </SplideSlide>
           <SplideSlide>
-            <div className="mx-20 my-5 py-6 backdrop-filter backdrop-blur-xl hover:bg-white hover:bg-opacity-10 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500 ">
+            <div className="mx-20 sm:mx-6 my-5 py-6 backdrop-filter backdrop-blur-xl hover:bg-white hover:bg-opacity-10 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500 ">
+              <div className="mb-5">
+                <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+                <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                  Samarth Gugnani
+                </h3>
+                <p className="text-white text-sm mb-3">
+                  Founder and blockchain developer
+                </p>
+
+                <ul className="social-nav model-3d-0">
+                  <li>
+                    <a href="www.infinix.com" className="facebook">
+                      <div className="front">
+                        <FontAwesomeIcon icon={brands("facebook")} />
+                      </div>
+                      <div className="back">
+                        <FontAwesomeIcon icon={brands("facebook")} />
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="www.infinix.com" className="twitter">
+                      <div className="front">
+                        <FontAwesomeIcon icon={brands("twitter")} />
+                      </div>
+                      <div className="back">
+                        <FontAwesomeIcon icon={brands("twitter")} />
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="www.infinix.com" className="instagram">
+                      <div className="front">
+                        <FontAwesomeIcon icon={brands("linkedin")} />
+                      </div>
+                      <div className="back">
+                        <FontAwesomeIcon icon={brands("linkedin")} />
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className="mx-20 sm:mx-6 my-5 py-6 backdrop-filter backdrop-blur-xl hover:bg-white hover:bg-opacity-10 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500 ">
+              <div className="mb-5">
+                <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
+                <h3 className="text-white text-lg leading-5  uppercase font-semibold">
+                  Samarth Gugnani
+                </h3>
+                <p className="text-white text-sm mb-3">
+                  Founder and blockchain developer
+                </p>
+
+                <ul className="social-nav model-3d-0">
+                  <li>
+                    <a href="www.infinix.com" className="facebook">
+                      <div className="front">
+                        <FontAwesomeIcon icon={brands("facebook")} />
+                      </div>
+                      <div className="back">
+                        <FontAwesomeIcon icon={brands("facebook")} />
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="www.infinix.com" className="twitter">
+                      <div className="front">
+                        <FontAwesomeIcon icon={brands("twitter")} />
+                      </div>
+                      <div className="back">
+                        <FontAwesomeIcon icon={brands("twitter")} />
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="www.infinix.com" className="instagram">
+                      <div className="front">
+                        <FontAwesomeIcon icon={brands("linkedin")} />
+                      </div>
+                      <div className="back">
+                        <FontAwesomeIcon icon={brands("linkedin")} />
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </SplideSlide>
+          <SplideSlide>
+            <div className="mx-20 sm:mx-6 my-5 py-6 backdrop-filter backdrop-blur-xl hover:bg-white hover:bg-opacity-10 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500 ">
               <div className="mb-5">
                 <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
                 <h3 className="text-white text-lg leading-5  uppercase font-semibold">
