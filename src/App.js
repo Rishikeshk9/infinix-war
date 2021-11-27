@@ -8,6 +8,8 @@ import Landing from "./components/Landing/Landing";
 
 import Team from "./components/Team/Team";
 import Footer from "./components/Footer/Footer";
+import Roadmap from "./components/Roadmap/Roadmap";
+
 import PlayNEarn from "./components/PlayNEarn/PlayNEarn";
 
 export default function App() {
@@ -35,6 +37,8 @@ export default function App() {
 
       <Landing></Landing>
       <PlayNEarn></PlayNEarn>
+
+      <Roadmap></Roadmap>
 
       <Team id="team"></Team>
       <Footer></Footer>

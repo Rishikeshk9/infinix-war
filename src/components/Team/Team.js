@@ -7,26 +7,6 @@ import { Splide, SplideSlide } from "@splidejs/react-splide";
 export default function StarField() {
   return (
     <div className="team" id="team">
-      <div className="container hidden">
-        <h3 className="title tex">Our Team</h3>
-        <div className="team-grids">
-          <div className="col-xs-4 team-grid">
-            <div className="pic">
-              <div className="stack twisted">
-                <img
-                  src="https://www.revolution.com/wp-content/uploads/2015/03/Meredith_Serious.jpg"
-                  alt=" "
-                  className="img-responsive"
-                />
-              </div>
-            </div>
-            <h4 className="text-white">Peter Parker</h4>
-            <i className="fa-solid fa-user"></i>
-          </div>
-          <div className="clearfix"> </div>
-        </div>
-      </div>
-
       <div className=" m-auto  w-max    transform self-center align-middle items-center  hidden">
         <div className="mat-sphere  mx-auto   "> </div>{" "}
       </div>
@@ -631,7 +611,11 @@ export default function StarField() {
           }}
         >
           <SplideSlide>
-            <div className="mx-20 sm:mx-6 my-5 py-6 backdrop-filter backdrop-blur-xl hover:bg-white hover:bg-opacity-10 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500 ">
+            <div
+              className="mx-20 sm:mx-6 my-5 py-6 backdrop-filter backdrop-blur-xl bg-white 
+            bg-opacity-1 hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  
+            rounded-xl  team-card transition-all duration-500 "
+            >
               <div className="mb-5">
                 <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
                 <h3 className="text-white text-lg leading-5  uppercase font-semibold">
@@ -677,7 +661,12 @@ export default function StarField() {
             </div>
           </SplideSlide>
           <SplideSlide>
-            <div className="mx-20 sm:mx-6 my-5 py-6 backdrop-filter backdrop-blur-xl hover:bg-white hover:bg-opacity-10 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500 ">
+            <div
+              className="mx-20 sm:mx-6 my-5 py-6 backdrop-filter backdrop-blur-xl bg-white 
+            bg-opacity-1 hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  
+            rounded-xl  team-card transition-all duration-500 "
+            >
+              {" "}
               <div className="mb-5">
                 <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
                 <h3 className="text-white text-lg leading-5  uppercase font-semibold">
@@ -723,7 +712,12 @@ export default function StarField() {
             </div>
           </SplideSlide>
           <SplideSlide>
-            <div className="mx-20 sm:mx-6 my-5 py-6 backdrop-filter backdrop-blur-xl hover:bg-white hover:bg-opacity-10 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500 ">
+            <div
+              className="mx-20 sm:mx-6 my-5 py-6 backdrop-filter backdrop-blur-xl bg-white 
+            bg-opacity-1 hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  
+            rounded-xl  team-card transition-all duration-500 "
+            >
+              {" "}
               <div className="mb-5">
                 <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
                 <h3 className="text-white text-lg leading-5  uppercase font-semibold">
@@ -769,7 +763,12 @@ export default function StarField() {
             </div>
           </SplideSlide>
           <SplideSlide>
-            <div className="mx-20 sm:mx-6 my-5 py-6 backdrop-filter backdrop-blur-xl hover:bg-white hover:bg-opacity-10 border-0.5 border-transparent  rounded-xl  team-card transition-all duration-500 ">
+            <div
+              className="mx-20 sm:mx-6 my-5 py-6 backdrop-filter backdrop-blur-xl bg-white 
+            bg-opacity-1 hover:bg-white hover:bg-opacity-5 border-0.5 border-transparent  
+            rounded-xl  team-card transition-all duration-500 "
+            >
+              {" "}
               <div className="mb-5">
                 <div className="h-24 w-24 bg-white rounded-full mx-auto m-5"></div>
                 <h3 className="text-white text-lg leading-5  uppercase font-semibold">

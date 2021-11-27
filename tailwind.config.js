@@ -6,6 +6,9 @@ module.exports = {
       dropShadow: {
         lg: "0 15px 15px rgba(255, 255, 255, 0.25)",
       },
+      opacity: {
+        1: ".02",
+      },
       colors: {
         offwhite: "#aaa",
       },
