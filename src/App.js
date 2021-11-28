@@ -11,36 +11,48 @@ import Footer from "./components/Footer/Footer";
 import Roadmap from "./components/Roadmap/Roadmap";
 
 import PlayNEarn from "./components/PlayNEarn/PlayNEarn";
+import React, { useState } from "react";
 
 export default function App() {
+  const [mute, setMute] = useState(true);
+
   return (
     <>
       <AnimatedCursor />
 
       <Navbar />
-
-      <ReactPlayer
-        url={videoLink}
-        playing={true}
-        controls={false}
-        muted={true}
-        height="100%"
-        width="100%"
-        loop={true}
-        className="video-player  md:w-full mt-20 self-center h-screen w-screen"
-        config={{
-          file: {
-            src: { videoLink },
-          },
-        }}
-      />
-
       <Landing></Landing>
-      <PlayNEarn></PlayNEarn>
+
+      <div className="  p-10  static">
+        <ReactPlayer
+          url={videoLink}
+          playing={true}
+          controls={false}
+          muted={mute}
+          height="100%"
+          width="100%"
+          loop={true}
+          className="video-player  md:w-full self-center h-screen  z-100"
+          config={{
+            file: {
+              src: { videoLink },
+            },
+          }}
+        />
+
+        <div
+          className="bg-white bg-opacity-5 w-32 h-32 mx-auto rounded-full absolute "
+          onClick={() => setMute(!mute)}
+        >
+          <i class="fas fa-volume-up text-white"></i>
+        </div>
+      </div>
+
+      <PlayNEarn className="hidden"></PlayNEarn>
 
       <Roadmap></Roadmap>
 
-      <Team id="team"></Team>
+      <Team></Team>
       <Footer></Footer>
     </>
   );

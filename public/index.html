@@ -3,10 +3,7 @@
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, max-scale=1"
-    />
+    <meta name="viewport" content="width=device-width, initial-scale=1 " />
     <meta name="theme-color" content="#000000" />
     <meta
       name="description"
@@ -21,7 +18,12 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r73/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/dat-gui/0.7.7/dat.gui.min.js"></script>
+    <link
+      rel="manifest"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
 
     <style>
       body {
@@ -42,6 +44,7 @@
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
     <div id="root"></div>
+
     <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
@@ -55,22 +58,32 @@
   </body>
 
   <script>
-    var scene = document.getElementById("scene");
-    var parallaxInstance = new Parallax(scene);
+    var scene1 = document.getElementById("scene");
+    var parallaxInstance = new Parallax(scene1, {
+      relativeInput: true,
+    });
 
     var scene2 = document.getElementById("scene2");
-    var parallaxInstance = new Parallax(scene2);
+    var parallaxInstance = new Parallax(scene2, {
+      relativeInput: true,
+    });
 
     var scene3 = document.getElementById("scene3");
-    var parallaxInstance = new Parallax(scene3);
+    var parallaxInstance = new Parallax(scene3, {
+      relativeInput: true,
+    });
 
     var scene4 = document.getElementById("scene4");
-    var parallaxInstance = new Parallax(scene4);
+    var parallaxInstance = new Parallax(scene4, {
+      relativeInput: true,
+    });
 
     var scene5 = document.getElementById("scene5");
-    var parallaxInstance = new Parallax(scene5);
-
-    var scenario, camera, renderer;
+    var parallaxInstance = new Parallax(scene5, {
+      relativeInput: true,
+    });
+  </script>
+  <!--   var scenario, camera, renderer;
 
     init();
     render();
@@ -218,5 +231,340 @@
     // document.querySelector("#team").scrollIntoView({
     //   behavior: "smooth",
     // });
+  </script> -->
+  <script>
+    /**
+     * Base
+     */
+    // Debug
+    //const gui = new dat.GUI({ width: 360, closed: true });
+
+    //texture
+    const textureLoader = new THREE.TextureLoader();
+
+    const particleTexture = textureLoader.load("/textures/particles/5.png");
+
+    // Canvas
+    const canvas = document.querySelector("canvas.webgl");
+
+    // Scene
+    const scene = new THREE.Scene();
+
+    //galaxy
+    const parameters = {};
+    parameters.count = 200000;
+    parameters.size = 0.01;
+    parameters.sizeAttenuation = true;
+    parameters.radius = 5;
+    parameters.branches = 5;
+    parameters.curve = 1;
+    parameters.randomness = 0.4;
+    parameters.randomnessPower = 2.2;
+    parameters.innerColor = "#ff6030";
+    parameters.outerColor = "#1b3984";
+
+    let geometry;
+    let material;
+    let galaxyPoints;
+
+    const generateGalaxy = () => {
+      const startsPositions = new Float32Array(parameters.count * 3);
+      const starsColors = new Float32Array(parameters.count * 3);
+
+      const insideColor = new THREE.Color(parameters.innerColor);
+      const outsideColor = new THREE.Color(parameters.outerColor);
+
+      for (let i = 0; i < parameters.count; i++) {
+        const i3 = i * 3;
+
+        const radius = Math.random() * parameters.radius;
+        const branchAngle =
+          ((i % parameters.branches) / parameters.branches) * Math.PI * 2;
+        const curveAngle = radius * parameters.curve;
+
+        const randomX =
+          Math.pow(Math.random(), parameters.randomnessPower) *
+          (Math.random() < 0.5 ? 1 : -1) *
+          parameters.randomness *
+          radius;
+        const randomY =
+          (Math.pow(Math.random(), parameters.randomnessPower) *
+            (Math.random() < 0.5 ? 1 : -1) *
+            parameters.randomness *
+            radius) /
+          2;
+        const randomZ =
+          Math.pow(Math.random(), parameters.randomnessPower) *
+          (Math.random() < 0.5 ? 1 : -1) *
+          parameters.randomness *
+          radius;
+
+        startsPositions[i3] =
+          Math.cos(branchAngle + curveAngle) * radius + randomX;
+        startsPositions[i3 + 1] = randomY;
+        startsPositions[i3 + 2] =
+          Math.sin(branchAngle + curveAngle) * radius + randomZ;
+
+        //color
+        const mixedColor = insideColor.clone();
+        mixedColor.lerp(outsideColor, radius / parameters.radius);
+
+        starsColors[i3 + 0] = mixedColor.r;
+        starsColors[i3 + 1] = mixedColor.g;
+        starsColors[i3 + 2] = mixedColor.b;
+      }
+
+      //remove old galaxy
+      if (geometry || material || galaxyPoints) {
+        geometry.dispose();
+        material.dispose();
+        scene.remove(galaxyPoints);
+      }
+
+      geometry = new THREE.BufferGeometry({});
+      geometry.setAttribute(
+        "position",
+        new THREE.BufferAttribute(startsPositions, 3)
+      );
+      geometry.setAttribute("color", new THREE.BufferAttribute(starsColors, 3));
+
+      material = new THREE.PointsMaterial({
+        size: parameters.size,
+        sizeAttenuation: parameters.sizeAttenuation,
+        depthWrite: false,
+        blending: THREE.AdditiveBlending,
+        vertexColors: true,
+        transparent: true,
+        alphaMap: particleTexture,
+      });
+
+      galaxyPoints = new THREE.Points(geometry, material);
+      scene.add(galaxyPoints);
+    };
+
+    generateGalaxy();
+
+    // //add parameters to gui
+    // gui
+    //   .add(parameters, "count")
+    //   .name("stars")
+    //   .min(100)
+    //   .max(1000000)
+    //   .step(100)
+    //   .onFinishChange(generateGalaxy);
+    // gui
+    //   .add(parameters, "size")
+    //   .name("star size")
+    //   .min(0.001)
+    //   .max(0.1)
+    //   .step(0.001)
+    //   .onFinishChange(generateGalaxy);
+    // gui
+    //   .add(parameters, "sizeAttenuation")
+    //   .name("star perspective")
+    //   .onFinishChange(generateGalaxy);
+    // gui
+    //   .add(parameters, "radius")
+    //   .name("galaxy radius")
+    //   .min(0.01)
+    //   .max(20)
+    //   .step(0.01)
+    //   .onFinishChange(generateGalaxy);
+    // gui
+    //   .add(parameters, "branches")
+    //   .min(2)
+    //   .max(20)
+    //   .step(1)
+    //   .onFinishChange(generateGalaxy);
+    // gui
+    //   .add(parameters, "curve")
+    //   .min(-5)
+    //   .max(5)
+    //   .step(0.001)
+    //   .onFinishChange(generateGalaxy);
+    // gui
+    //   .add(parameters, "randomness")
+    //   .min(0)
+    //   .max(2)
+    //   .step(0.001)
+    //   .onFinishChange(generateGalaxy);
+    // gui
+    //   .add(parameters, "randomnessPower")
+    //   .name("randomness easing")
+    //   .min(1)
+    //   .max(10)
+    //   .step(0.001)
+    //   .onFinishChange(generateGalaxy);
+    // gui
+    //   .addColor(parameters, "innerColor")
+    //   .name("inner color")
+    //   .onFinishChange(generateGalaxy);
+    // gui
+    //   .addColor(parameters, "outerColor")
+    //   .name("outer color")
+    //   .onFinishChange(generateGalaxy);
+
+    /**
+     * Sizes
+     */
+    const sizes = {
+      width: window.innerWidth,
+      height: window.innerHeight,
+    };
+
+    window.addEventListener("resize", () => {
+      // Update sizes
+      sizes.width = window.innerWidth;
+      sizes.height = window.innerHeight;
+
+      // Update camera
+      camera.aspect = sizes.width / sizes.height;
+      camera.updateProjectionMatrix();
+
+      // Update renderer
+      renderer.setSize(sizes.width, sizes.height);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+    });
+
+    /**
+     * Camera
+     */
+    // Base camera
+    const camera = new THREE.PerspectiveCamera(
+      75,
+      sizes.width / sizes.height,
+      0.1,
+      100
+    );
+    camera.position.x = 0;
+    camera.position.y = 0;
+    camera.position.z = 5;
+    scene.add(camera);
+
+    // Controls
+    // const controls = new OrbitControls(camera, canvas);
+    // controls.enableDamping = true;
+
+    /**
+     * Renderer
+     */
+    const renderer = new THREE.WebGLRenderer({
+      canvas: canvas,
+    });
+    renderer.setSize(sizes.width, sizes.height);
+    renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+
+    /**
+     * Animate
+     */
+    const clock = new THREE.Clock();
+
+    const tick = () => {
+      const elapsedTime = clock.getElapsedTime();
+
+      // update galaxy
+      galaxyPoints.rotation.y = elapsedTime * 0.1;
+      galaxyPoints.rotation.z = Math.sin(
+        galaxyPoints.rotation.z + elapsedTime * Math.PI * 0.02
+      );
+      galaxyPoints.rotation.x = Math.cos(
+        galaxyPoints.rotation.z + elapsedTime * Math.PI * 0.02
+      );
+
+      // Update controls
+      //controls.update();
+
+      // Render
+      renderer.render(scene, camera);
+
+      // Call tick again on the next frame
+      window.requestAnimationFrame(tick);
+    };
+
+    tick();
+  </script>
+  <script>
+    window.requestAnimFrame = (function () {
+      return (
+        window.requestAnimationFrame ||
+        window.webkitRequestAnimationFrame ||
+        window.mozRequestAnimationFrame ||
+        window.oRequestAnimationFrame ||
+        window.msRequestAnimationFrame ||
+        function (callback) {
+          window.setTimeout(callback, 1000 / 60);
+        }
+      );
+    })();
+    var c = document.getElementById("canv");
+    var $ = c.getContext("2d");
+    var w = (c.width = window.innerWidth);
+    var h = (c.height = window.innerHeight);
+    var _w = w * 0.5;
+    var _h = h * 0.5;
+    var arr = [];
+    var cnt = 0;
+
+    window.addEventListener("load", resize);
+    window.addEventListener("resize", resize, false);
+
+    function resize() {
+      c.width = w = window.innerWidth;
+      c.height = h = window.innerHeight;
+      c.style.position = "relative";
+      c.style.left = (window.innerWidth - w) * 0.001 + "px";
+      c.style.top = (window.innerHeight - h) * 0.001 + "px";
+    }
+
+    function anim() {
+      cnt++;
+      if (cnt % 6) draw();
+      window.requestAnimFrame(anim);
+    }
+    anim();
+
+    function draw() {
+      var splot = {
+        x: rng(_w - 900, _w + 900),
+        y: rng(_h - 900, _h + 900),
+        r: rng(20, 80),
+        spX: rng(-1, 1),
+        spY: rng(-1, 1),
+      };
+
+      arr.push(splot);
+      while (arr.length > 100) {
+        arr.shift();
+      }
+      $.clearRect(0, 0, w, h);
+
+      for (var i = 0; i < arr.length; i++) {
+        splot = arr[i];
+        $.fillStyle = rndCol();
+        $.beginPath();
+        $.arc(splot.x, splot.y, splot.r, 0, Math.PI * 2, true);
+        $.shadowBlur = 80;
+        $.shadowOffsetX = 2;
+        $.shadowOffsetY = 2;
+        $.shadowColor = rndCol();
+        $.globalCompositeOperation = "lighter";
+        $.fill();
+
+        splot.x = splot.x + splot.spX;
+        splot.y = splot.y + splot.spY;
+        splot.r = splot.r * 0.96;
+      }
+    }
+
+    function rndCol() {
+      var r = Math.floor(Math.random() * 180);
+      var g = Math.floor(Math.random() * 60);
+      var b = Math.floor(Math.random() * 100);
+      return "rgb(" + r + "," + g + "," + b + ")";
+    }
+
+    function rng(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
   </script>
 </html>

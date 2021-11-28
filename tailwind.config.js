@@ -20,6 +20,7 @@ module.exports = {
     border: {
       0.5: "0.5px solid",
     },
+    zIndex: { 100: 100, 99: "-80" },
 
     glow: {
       colors: {
