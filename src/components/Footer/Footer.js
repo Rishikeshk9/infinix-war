@@ -63,19 +63,19 @@ export default function StarField() {
           </div>
           <ul class="list-inline flex mx-auto  w-max">
             <li class="list-inline-item">
-              <a href="#">About</a>
+              <a href="#about">About</a>
             </li>
             <li class="list-inline-item">
-              <a href="#">Roadmap</a>
+              <a href="#roadmap">Roadmap</a>
             </li>
             <li class="list-inline-item">
-              <a href="#">Team</a>
+              <a href="#team">Team</a>
             </li>
             <li class="list-inline-item">
-              <a href="#">About</a>
+              <a href="#about">About</a>
             </li>
             <li class="list-inline-item">
-              <a href="#">Whitepaper</a>
+              <a href="#whitepaper">Whitepaper</a>
             </li>
           </ul>
           <p class="copyright">Infinix War © 2021</p>
