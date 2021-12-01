@@ -86,6 +86,7 @@ h2 {
   flex-direction: column;
   margin: 20px auto;
   position: relative;
+  width: 100%;
 }
 .timeline__event {
   margin-bottom: 20px;

@@ -2,8 +2,8 @@ import StarfieldAnimation from "../StarField/StarField";
 
 export default function Landing() {
   return (
-    <div className="    w-screen h-screen ">
-      <StarfieldAnimation className="hidden"></StarfieldAnimation>
+    <div className="  w-full lg:h-screen h-screen">
+      <StarfieldAnimation className="hidden w-full"></StarfieldAnimation>
 
       <div className="  ">
         <div className="cube mx-auto  pt-48 mt-20 hidden">
@@ -18,15 +18,16 @@ export default function Landing() {
       </div>
       <canvas className="webgl absolute  z-99"></canvas>
 
-      <div className=" pt-72">
-        <h4 className="text-white text-left  font-bold text-3xl lg:text-4xl  pt-24 px-28 transition delay-150 duration-300 ease-in-out">
-          <div className="flex-shrink-0 flex md:items-center text-white text-9xl md:self-center md:text-center font-bold mb-10">
+      <div className=" lg:pt-72 pt-20 w-full">
+        <h4 className=" text-white text-left  font-bold text-xl lg:text-4xl  lg:pt-24 pt-12 lg:px-28 px-14 transition delay-150 duration-300 ease-in-out">
+          <div className="flex-shrink-0 flex md:items-center text-white lg:text-9xl text-6xl md:self-center md:text-center font-bold mb-10">
             INFINIX WAR
           </div>
-          The lucrative NFT fantasy-themed RPG Game on
-          <br /> BSC and Polygon
+          <p className=" pt-6 lg:pt-0">
+            The lucrative NFT fantasy-themed RPG Game on <br /> BSC and Polygon
+          </p>
         </h4>
-        <h4 className="text-white text-left  font-bold     px-28">
+        <h4 className="text-white text-left  font-bold lg:px-28 px-14 pt-4 lg:pt-0">
           <a href="www.infinix.com" className="neon-button   ">
             <span></span>
             <span></span>
@@ -36,7 +37,7 @@ export default function Landing() {
           </a>
         </h4>
 
-        <div className="  w-max self-center    flex  px-28 ">
+        <div className="  w-max self-center    flex  lg:px-28 px-10 ">
           <div className="btn btn1 mt-44 ">
             <div className="icon  ">
               <svg viewBox="0 0 22 18" xmlns="http://www.w3.org/2000/svg">

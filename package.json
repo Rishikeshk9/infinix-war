@@ -26,7 +26,8 @@
     "react-starfield-animation": "^1.0.1",
     "smooth-scroll": "^16.1.3",
     "tailwindcss-filters": "^3.0.0",
-    "tailwindcss-glow": "^2.0.0-beta.1"
+    "tailwindcss-glow": "^2.0.0-beta.1",
+    "tsparticles": "^1.37.5"
   },
   "scripts": {
     "start": "craco start",

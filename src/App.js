@@ -23,7 +23,7 @@ export default function App() {
       <Navbar />
       <Landing></Landing>
 
-      <div className="  p-10  static">
+      <div className="  p-2 w-screen static pt-24  lg:pt-0 mb-10">
         <ReactPlayer
           url={videoLink}
           playing={true}
@@ -41,14 +41,14 @@ export default function App() {
         />
 
         <div
-          className="bg-white bg-opacity-5 w-32 h-32 mx-auto rounded-full absolute "
+          className="bg-white bg-opacity-5 lg:w-32 lg:h-32 mx-auto rounded-full absolute "
           onClick={() => setMute(!mute)}
         >
           <i class="fas fa-volume-up text-white"></i>
         </div>
       </div>
 
-      <PlayNEarn className="hidden"></PlayNEarn>
+      <PlayNEarn className=""></PlayNEarn>
 
       <Roadmap></Roadmap>
 

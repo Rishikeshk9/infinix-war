@@ -15,11 +15,11 @@ export default function StarField() {
       </div>
       <div class="footer-basic w-full">
         <footer>
-          <h3 className="mx-auto text-white text-5xl font-extrabold my-10">
+          <h3 className="mx-auto text-white lg:text-5xl text-4xl font-extrabold my-10">
             INFINIX WAR
           </h3>
           <div class="social w-max mx-auto">
-            <div className="  w-max self-center    flex  px-28 ">
+            <div className="  w-max self-center    flex  lg:px-28 px-8 ">
               <div className="btn btn1 mt-44 ">
                 <div className="icon  ">
                   <svg viewBox="0 0 22 18" xmlns="http://www.w3.org/2000/svg">

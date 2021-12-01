@@ -34,10 +34,10 @@ export default function StarField() {
         </div>
       </div>
 
-      <h4 className="uppercase text-center text-white text-5xl self-center mx-auto justify-center font-bold mt-3 mb-6 z-100">
+      <h4 className="uppercase  text-center text-white text-5xl self-center mx-auto justify-center font-bold mt-3  z-100">
         TEAM
       </h4>
-      <div className="flex  ">
+      <div className="flex ">
         <Splide
           className="w-full lg:mx-32"
           options={{
